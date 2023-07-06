@@ -44,7 +44,7 @@ def parse_authors():
             break
     with open('authors.json', 'w') as fd:
         json.dump(json_, fd)
-    return 'END'
+
 
 def parse_quotes():
     json_ = []
@@ -70,9 +70,10 @@ def parse_quotes():
             break
     with open('quotes.json', 'w', encoding='utf-8') as fd:
         json.dump(json_, fd, ensure_ascii= False)
-    return len(json_)
+
 
 
 
 if __name__ == '__main__':
-    print(parse_quotes())
+    parse_authors()
+    parse_quotes()
